@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes"><!--删除默认的苹果工具栏和菜单栏-->
+<meta name="apple-mobile-web-app-status-bar-style" content="blank"><!--设置Web App的状态栏（屏幕顶部栏）的样式-->
+<meta name="format-detection" content="telephone=no"><!--启动或禁用自动识别页面中的电话号码-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit"><!--html打开强制为极速模式-->
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<title>报价系统-顶层互联网家</title>
+<link rel="stylesheet" type="text/css" href="css/head.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<div class="head">
+    <div class="logo"><div><a href="login.html"></a></div><b></b></div>
+    <div class="so">
+    	<div class="so_box">
+            <div class="so_t">
+                <input type="text" name="text" placeholder="请输入客户姓名 / 客户电话查询">
+                <a href="javascript:;"><div class="icon_so"></div></a>
+            </div>
+            <span class="web_wz">当前位置：<a href="#">客户订单</a></span>
+        </div>
+        <b></b>
+    </div>
+    <div class="time">
+        <div>
+            <div id="T1"></div>
+            <div id="T2"></div>
+        </div>
+        <b></b>
+    </div>
+    <div class="btns">
+        <div class="b_1 b"><a href="add_info.html"><div><span></span><p>添加客户</p></div><b></b></a></div>
+        <div class="b_2 b"><a href="guest_obj.html"><div><span></span><p>客户案例</p></div><b></b></a></div>
+        <div class="b_3 b"><a href="goods_pro.html"><div><span></span><p>家居超市</p></div><b></b></a></div>
+        <div class="b_4 b close"><a href="javascript:;"><div><span></span><p>注销</p></div><b></b></a></div>
+    </div>
+</div>
+<div class="content">
+	<div class="d_li">
+    	<div class="d_li_info">
+        	<i class="num">订单编号:201600001</i>
+            <i class="kehu">客户:张晓明</i>
+            <i class="status">状态:已结单</i>
+            <!--<i class="zone">[西工]-[加州1885]-[126平]</i>-->
+            <i class="beginner">订单创始人:小红</i>
+            <!--<i class="price">金额:¥2046.25</i>-->
+            <i class="time">2016/02/01</i>
+        </div>
+        <div class="d_b">
+        	<div class="edit"><a href="list.html">查看详情</a></div>
+			<div class="del"><a href="javascript:;">删除</a></div>
+        </div>        
+    </div>
+	<div class="d_li">
+    	<div class="d_li_info">
+        	<i class="num">订单编号:201600002</i>
+            <i class="kehu">客户:李小虎</i>
+            <i class="status">状态:操作中</i>
+            <!--<i class="zone">[西工]-[加州1885]-[126平]</i>-->
+            <i class="beginner">订单创始人:小红</i>
+            <!--<i class="price">金额:¥2046.25</i>-->
+            <i class="time">2016/02/01</i>
+        </div>
+        <div class="d_b">
+        	<div class="edit"><a href="list.html">查看详情</a></div>
+			<div class="del"><a href="javascript:;">删除</a></div>
+        </div>        
+    </div>
+    <div class="d_li">
+    	<div class="d_li_info">
+        	<i class="num">订单编号:201600003</i>
+            <i class="kehu">客户:王三吉</i>
+            <i class="status">状态:进行中</i>
+            <!--<i class="zone">[西工]-[加州1885]-[126平]</i>-->
+            <i class="beginner">订单创始人:小红</i>
+            <!--<i class="price">金额:¥2046.25</i>-->
+            <i class="time">2016/02/01</i>
+        </div>
+        <div class="d_b">
+        	<div class="edit"><a href="list.html">查看详情</a></div>
+			<div class="del"><a href="javascript:;">删除</a></div>
+        </div>        
+    </div>
+    <div class="d_add"><a href="javascript:;">+</a></div>
+</div>
+<div class="foot">
+	<div class="jiesuan">
+    	<div class="z_pri"><p>总金额（元）</p><p class="z_s">2016.00</p></div>
+        <div class="j_btn" id="j_btn"><a href="javascript:;">创建订单</a></div>
+    </div>
+    <b></b>
+</div>
+<!--弹框-选择客户-->
+<div class="mask">
+    <div class="pop">
+        <div class="pop_t">创建订单-选择客户</div>
+        <div class="pop_so"><form>
+        	<input type="text" maxlength="11" name="s_txt" placeholder="手机号码" autocomplete="off">
+            <button type="button" name="s_btn">查询客户</button></form>
+        </div>
+        <div class="pop_con">
+            <span class="p_con_li"><p>姓名：</p><p class="p_con_li_t">张晓明</p></span>
+            <span class="p_con_li"><p>小区：</p><p class="p_con_li_t">盛唐至尊</p></span>
+            <span class="p_con_li"><p>户型：</p><p class="p_con_li_t">三室一厅</p></span>
+            <span class="p_con_li"><p>备注：</p><textarea readonly>2016年2月29日由小王接待2016年2月29日由小王接待2016年2月29日由小王接待2016年2月29日由小王接待</textarea></span>
+        </div>
+        <div class="pop_btn"><button type="button" name="btn_sure">确定</button><button type="button" name="btn_cannel">取消</button></div>
+    </div>
+</div>
+</body>
+<script>
+function btnSize(){
+    var btnID = document.getElementById("j_btn");
+    var btnH = btnID.offsetHeight;
+    btnID.style.lineHeight = btnH +"px";
+}
+window.onresize = function(){
+    btnSize();
+    }
+window.onload = function(){
+    btnSize();
+	
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = d.getMonth()+1;
+	var date = d.getDate();
+	month = checktime(month);
+	date = checktime(date);
+	var Dates = year+"-"+month+"-"+date;
+	
+	window.setInterval(Time1,100);
+	function Time1(){
+		var D = new Date();
+		var hour = D.getHours();
+		var minute = D.getMinutes();
+		var second = D.getSeconds();
+		var weekday = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+		var week = weekday[D.getDay()];
+		hour = checktime(hour);
+		minute = checktime(minute);
+		second = checktime(second);
+		var Times = hour+":"+minute+":"+second+"&nbsp&nbsp"+week;
+		document.getElementById("T1").innerHTML = Dates;
+		document.getElementById("T2").innerHTML = Times;
+    }
+	
+	function checktime(i){
+		if(i<10){
+			i="0"+i;
+			}
+			return i;
+		}
+
+    $('.d_b .del').click(function(){
+		var _this = this;
+        $(this).parents('.d_li').addClass('d_li_del');
+		window.setTimeout(function(){
+			$(_this).parents('.d_li').remove();
+			},300);
+    });
+	
+	$('.d_li_info .status').each(function(){
+		var classname = $(this).text();
+		if(classname.match(/操作中/g)){
+			$(this).addClass('on');}
+		if(classname.match(/进行中/g)){
+			$(this).addClass('ing');}
+		if(classname.match(/已结单/g)){
+			$(this).parent().siblings().children('.edit').css({'width':'250px','text-indent':'-4em'}).siblings().remove();}
+		});
+	
+	$('#j_btn a').on('click',function(){
+		$('.mask').addClass('maskon');
+		$('.pop').addClass('popon');
+		});
+	$('button[name="btn_sure"]').on('click',function(){
+		var Tel = $('input[name="s_txt"]').val();
+		if(!/^1\d{10}$/.test(Tel)){
+			alert('请输入真确的手机号码');
+			}else{
+				alert('ok');
+				}
+		});
+	$('button[name="btn_cannel"]').on('click',function(){
+		$('.mask').removeClass('maskon');
+		$('.pop').removeClass('popon');
+		});
+	
+	$('body').contents().not('.content').on('touchmove',function(e){
+		e.preventDefault(); //禁止浏览器的 橡皮筋效果
+		});
+}
+</script>
+</html>

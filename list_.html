@@ -1,0 +1,549 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes"><!--删除默认的苹果工具栏和菜单栏-->
+<meta name="apple-mobile-web-app-status-bar-style" content="blank"><!--设置Web App的状态栏（屏幕顶部栏）的样式-->
+<meta name="format-detection" content="telephone=no"><!--启动或禁用自动识别页面中的电话号码-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit"><!--html打开强制为极速模式-->
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<title>报价单编辑-顶层互联网家</title>
+<link rel="stylesheet" type="text/css" href="css/head.css" />
+<link rel="stylesheet" type="text/css" href="css/list_.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<div class="head">
+    <div class="logo"><div><a href="login.html"></a></div><b></b></div>
+    <div class="so">
+    	<div class="so_box">
+            <div class="so_t">
+                <input type="text" name="text" placeholder="请输入客户姓名 / 客户电话查询">
+                <a href="javascript:;"><div class="icon_so"></div></a>
+            </div>
+            <span class="web_wz">当前位置：<a href="#1">客户订单</a>&nbsp;&gt;&nbsp;<a href="#2">订单详情</a></span>
+        </div>
+        <b></b>
+    </div>
+    <div class="time">
+        <div>
+            <div id="T1"></div>
+            <div id="T2"></div>
+        </div>
+        <b></b>
+    </div>
+    <div class="btns">
+        <div class="b_1 b"><a href="add_info.html"><div><span></span><p>添加客户</p></div><b></b></a></div>
+        <div class="b_2 b"><a href="guest_obj.html"><div><span></span><p>客户案例</p></div><b></b></a></div>
+        <div class="b_3 b"><a href="goods_pro.html"><div><span></span><p>家居超市</p></div><b></b></a></div>
+        <div class="b_4 b close"><a href="javascript:;"><div><span></span><p>注销</p></div><b></b></a></div>
+    </div>
+</div>
+<div class="pro" id="pro_t">
+	<ul class="fixclear">
+    	<li class="li_order">序号</li>
+        <li class="li_code">商品编码</li>
+        <li class="li_name">商品名称</li>
+        <li class="li_brand">品牌商</li>
+        <li class="li_price">单价</li>
+        <li class="li_units">单位</li>
+        <li class="li_num">数量</li>
+        <li class="li_marks">备注</li>
+        <li class="li_op">操作</li>
+    </ul>
+</div>
+<div class="content">
+	<div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+    <div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+    <div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+    <div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+    <div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+    <div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+    <div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+    <div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+    <div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+    <div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+    <div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+    <div class="c_goods fixclear">
+    	<ul>
+            <li class="li_order">01</li>
+            <li class="li_code">60021541</li>
+            <li class="li_name">圣象三层实木地板</li>
+            <li class="li_brand">圣象</li>
+            <li class="li_price">255.00</li>
+            <li class="li_units">㎡</li>
+            <li class="li_num"><input type="text" readonly value="1000" /></li>
+            <li class="li_marks"><input type="text" readonly value="防水型" /></li>
+            <li class="li_op"><button type="button" name="edit">编辑</button><button type="button" name="del">删除</button></li>
+        </ul>
+    </div>
+</div>
+<div class="foot">
+	<div class="info">
+    	<p class="kehu">客户:张晓明</p>
+        <p class="num">订单编号:201600001</p>
+        <p class="zone">[西工]-[加州1885]-[126平]</p>
+        <p class="beginner">订单创始人:小红</p>
+        <p class="f_time">创建时间:2016/02/01</p>
+    </div>
+	<div class="jiesuan">
+    	<div class="z_pri"><p>总金额</p><p class="z_s">5000</p></div>
+        <div class="z_pri"><p>定金</p><p class="z_s">0</p></div>
+        <div class="z_pri"><p>实付</p><p class="z_s">0</p></div>
+        <div class="j_btn j1" id="t_btn"><a href="javascript:;">添加</a></div>
+        <div class="j_btn j2" id="j_btn"><a href="javascript:;">结算</a></div>
+    </div>
+    <b></b>
+</div>
+<!--弹窗商品-->
+<div class="pop">
+	<div class="pop_t">选择商品</div>
+    <div class="label fixclear" id="labs">
+        <div class="lab fixclear" style="float:left;">
+            <!--<span>分类</span>-->
+            <ul>
+                <li><a href="#" class="on">全屋定制</a></li>
+                <li><a href="#">家居饰品</a></li>
+                <li><a href="#">建材五金</a></li>
+                <li><a href="#">卫浴花洒</a></li>
+                <li><a href="#">家具窗帘</a></li>
+            </ul>
+        </div>
+        <div class="so so_lab" style="float:right;">
+            <div class="so_t">
+                <input type="text" name="text" placeholder="商品名称/编码">
+                <a href="javascript:;"><div class="icon_so"></div></a>
+            </div>
+        </div>
+    </div>
+    <div class="pro" id="pop_pro_t">
+        <ul class="fixclear">
+            <li class="p_li_pic">图片</li>
+            <li class="p_li_code">商品编码</li>
+            <li class="p_li_name">商品名称</li>
+            <li class="p_li_price">价格</li>
+            <li class="p_li_units">单位</li>
+            <li class="p_li_num">数量</li>
+            <li class="p_li_op">添加</li>
+        </ul>
+    </div>
+
+	<div class="pop_goods">
+    	<div class="pop_li">
+        	<div class="p_li_pic"><a href="#"><img src="image/good_pic_a.jpg"></a></div>
+            <div class="p_li_code">6001111</div>
+            <div class="p_li_name"><p><a href="#">圣象三层实木地板圣象三层实木地板圣象三层实木地板</a></p><b></b></div>
+            <div class="p_li_price">¥39.99</div>
+            <div class="p_li_units">㎡</div>
+            <div class="p_li_num"><input type="number" name="number" min="0" max="100" value="1"></div>
+            <div class="p_li_op"><div class="btn_icon"></div></div>
+        </div>
+        <div class="pop_li">
+        	<div class="p_li_pic"><a href="#"><img src="image/good_pic_a.jpg"></a></div>
+            <div class="p_li_code">6001111</div>
+            <div class="p_li_name"><p><a href="#">圣象三层实木地板圣象三层实木地板圣象三层实木地板</a></p><b></b></div>
+            <div class="p_li_price">¥39.99</div>
+            <div class="p_li_units">㎡</div>
+            <div class="p_li_num"><input type="number" name="number" min="0" max="100" value="1"></div>
+            <div class="p_li_op"><div class="btn_icon"></div></div>
+        </div>
+        <div class="pop_li">
+        	<div class="p_li_pic"><a href="#"><img src="image/good_pic_a.jpg"></a></div>
+            <div class="p_li_code">6001111</div>
+            <div class="p_li_name"><p><a href="#">圣象三层实木地板圣象三层实木地板圣象三层实木地板</a></p><b></b></div>
+            <div class="p_li_price">¥39.99</div>
+            <div class="p_li_units">㎡</div>
+            <div class="p_li_num"><input type="number" name="number" min="0" max="100" value="1"></div>
+            <div class="p_li_op"><div class="btn_icon"></div></div>
+        </div>
+        <div class="pop_li">
+        	<div class="p_li_pic"><a href="#"><img src="image/good_pic_a.jpg"></a></div>
+            <div class="p_li_code">6001111</div>
+            <div class="p_li_name"><p><a href="#">圣象三层实木地板圣象三层实木地板圣象三层实木地板</a></p><b></b></div>
+            <div class="p_li_price">¥39.99</div>
+            <div class="p_li_units">㎡</div>
+            <div class="p_li_num"><input type="number" name="number" min="0" max="100" value="1"></div>
+            <div class="p_li_op"><div class="btn_icon"></div></div>
+        </div>
+        <div class="pop_li">
+        	<div class="p_li_pic"><a href="#"><img src="image/good_pic_a.jpg"></a></div>
+            <div class="p_li_code">6001111</div>
+            <div class="p_li_name"><p><a href="#">圣象三层实木地板圣象三层实木地板圣象三层实木地板</a></p><b></b></div>
+            <div class="p_li_price">¥39.99</div>
+            <div class="p_li_units">㎡</div>
+            <div class="p_li_num"><input type="number" name="number" min="0" max="100" value="1"></div>
+            <div class="p_li_op"><div class="btn_icon"></div></div>
+        </div>
+        <div class="pop_li">
+        	<div class="p_li_pic"><a href="#"><img src="image/good_pic_a.jpg"></a></div>
+            <div class="p_li_code">6001111</div>
+            <div class="p_li_name"><p><a href="#">圣象三层实木地板圣象三层实木地板圣象三层实木地板</a></p><b></b></div>
+            <div class="p_li_price">¥39.99</div>
+            <div class="p_li_units">㎡</div>
+            <div class="p_li_num"><input type="number" name="number" min="0" max="100" value="1"></div>
+            <div class="p_li_op"><div class="btn_icon"></div></div>
+        </div>
+        <div class="pop_li">
+        	<div class="p_li_pic"><a href="#"><img src="image/good_pic_a.jpg"></a></div>
+            <div class="p_li_code">6001111</div>
+            <div class="p_li_name"><p><a href="#">圣象三层实木地板圣象三层实木地板圣象三层实木地板</a></p><b></b></div>
+            <div class="p_li_price">¥39.99</div>
+            <div class="p_li_units">㎡</div>
+            <div class="p_li_num"><input type="number" name="number" min="0" max="100" value="1"></div>
+            <div class="p_li_op"><div class="btn_icon"></div></div>
+        </div>
+        <div class="pop_li">
+        	<div class="p_li_pic"><a href="#"><img src="image/good_pic_a.jpg"></a></div>
+            <div class="p_li_code">6001111</div>
+            <div class="p_li_name"><p><a href="#">圣象三层实木地板圣象三层实木地板圣象三层实木地板</a></p><b></b></div>
+            <div class="p_li_price">¥39.99</div>
+            <div class="p_li_units">㎡</div>
+            <div class="p_li_num"><input type="number" name="number" min="0" max="100" value="1"></div>
+            <div class="p_li_op"><div class="btn_icon"></div></div>
+        </div>
+        <div class="pop_li">
+        	<div class="p_li_pic"><a href="#"><img src="image/good_pic_a.jpg"></a></div>
+            <div class="p_li_code">6001111</div>
+            <div class="p_li_name"><p><a href="#">圣象三层实木地板圣象三层实木地板圣象三层实木地板</a></p><b></b></div>
+            <div class="p_li_price">¥39.99</div>
+            <div class="p_li_units">㎡</div>
+            <div class="p_li_num"><input type="number" name="number" min="0" max="100" value="1"></div>
+            <div class="p_li_op"><div class="btn_icon"></div></div>
+        </div>
+        <div class="pop_li">
+        	<div class="p_li_pic"><a href="#"><img src="image/good_pic_a.jpg"></a></div>
+            <div class="p_li_code">6001111</div>
+            <div class="p_li_name"><p><a href="#">圣象三层实木地板圣象三层实木地板圣象三层实木地板</a></p><b></b></div>
+            <div class="p_li_price">¥39.99</div>
+            <div class="p_li_units">㎡</div>
+            <div class="p_li_num"><input type="number" name="number" min="0" max="100" value="1"></div>
+            <div class="p_li_op"><div class="btn_icon"></div></div>
+        </div>
+    </div>
+    <div class="exit"></div>
+</div>
+<!--遮罩层-->
+<div class="mask">
+	<div class="success">请确认所有商品都已保存！</div>
+</div>
+<!--预付款-->
+<div class="advance">
+	<div class="ad_t">预付定金</div>
+    <div class="ad_con ad_con_h">
+    	<div class="fixclear"><span>定金：</span><span class="srk"><input type="text" name="dingjin" value="" autocomplete="off"></span></div>
+        <div class="fixclear"><span>优惠：</span><span class="srk"><input type="text" name="youhui" value="" autocomplete="off"></span></div>
+       <div class="fixclear"><span>总金额：</span><span class="srk"><input type="text" name="zongjin" value="" autocomplete="off"></span></div>
+        <div class="fixclear"><span>实付：</span><span class="srk"><input type="text" name="shifu" value="" autocomplete="off"></span></div>
+    </div>
+    <div class="ad_btn">
+    	<button type="button" id="btn_advan" name="ad_yes">确定</button><button type="button" name="ad_no">取消</button>
+    </div>
+</div>
+</body>
+<script>
+function btnSize(){
+	var t_btnID = document.getElementById("t_btn");
+	var j_btnID = document.getElementById("j_btn");
+	var btnH = t_btnID.offsetHeight;
+	t_btnID.style.lineHeight = btnH +"px";
+	j_btnID.style.lineHeight = btnH +"px";
+}
+window.onresize = function(){
+	btnSize();
+	}
+window.onload = function(){
+	btnSize();
+	
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = d.getMonth()+1;
+	var date = d.getDate();
+	month = checktime(month);
+	date = checktime(date);
+	var Dates = year+"-"+month+"-"+date;
+	
+	window.setInterval(Time1,100);
+	function Time1(){
+		var D = new Date();
+		var hour = D.getHours();
+		var minute = D.getMinutes();
+		var second = D.getSeconds();
+		var weekday = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+		var week = weekday[D.getDay()];
+		hour = checktime(hour);
+		minute = checktime(minute);
+		second = checktime(second);
+		var Times = hour+":"+minute+":"+second+"&nbsp&nbsp"+week;
+		document.getElementById("T1").innerHTML = Dates;
+		document.getElementById("T2").innerHTML = Times;
+    }
+	
+	function checktime(i){
+		if(i<10){
+			i="0"+i;
+			}
+			return i;
+		}
+		
+	$('.c_goods [name="del"]').click(function(){
+		var mess = confirm('确定要删除吗？');
+		if(mess == true){
+			$(this).parents('.c_goods').remove();
+			}else{
+			return;}
+	});
+
+	$('.c_goods [name="edit"]').click(function(){
+		if($(this).text()=='编辑'){
+			$(this).text('保存'); 
+			$(this).parents('.c_goods').find('input:text').prop('readonly',false).addClass('oninput');
+			}
+		else{
+			$(this).text('编辑'); 
+			$(this).parents('.c_goods').find('input:text').prop('readonly',true).removeClass('oninput');
+			}
+		})
+
+	
+	function Complete(){
+		$('.c_goods').find('input:text').prop('readonly',true).removeClass('oninput');
+		$('li.li_op').remove();
+		$('li.li_marks').css('width','25%');
+		$('li.li_name').css('width','33%');
+		$('.jiesuan').addClass('jiesuanon');
+		$('#t_btn').addClass('money').children().text('付定金');
+		$('#j_btn').addClass('closing').children().text('结单');
+	};
+	
+	$('#t_btn').on('click',function(){
+		$('.pop').addClass('onpop');
+		});
+	$('.pop .exit').on('click',function(){
+		$('.pop').removeClass('onpop');
+		});
+		
+	$('.jiesuan #j_btn').on('click',function Account(){//结算按钮执行function
+		var num=0;
+		var cg = $('.content .c_goods').length;
+		var gg=cg;
+		for(var i=0; i<cg; i++){
+			var txt = $('.c_goods:eq('+(gg-1)+')').find('[name="edit"]').text();
+			gg--;
+			if(txt=='保存'){
+				 num++;
+			}
+		}
+		console.log(num);
+		if(cg == 0){
+			alert('请添加商品！');
+			}else{
+				if(num>0){
+					$('.mask').addClass('maskon').children().addClass('suon');
+					}
+					else{
+						var mess = confirm('结算后商品不可编辑或删除，确定要结算吗？');//商品全部保存callack
+						if(mess==true){
+							Complete();
+							$(this).off('click',Account).on('click',Closing);
+							$('.money').off('click').on('click',Money);
+						}else{ return; }
+					}
+				}
+		
+	});//
+	function Closing(){//结单按钮执行function
+		if($('.z_pri:eq(2) .z_s').text()<=0){
+			alert('纳尼！我还要倒贴钱！！');
+		}else{
+			alert('完成结单');
+			}
+		};
+	function Money(){
+		$('.mask').addClass('maskon');
+		$('.advance').css({'-webkit-transform':'translate(-50%,-50%)','opacity':'1','pointer-events':'auto'});
+		}
+	
+	$('.success').on('click',function(){
+		$(this).removeClass('suon').parent().removeClass('maskon');
+	});
+	
+	/*-------------交定金计算------------------*/
+	$('.advance #btn_advan').on('click',function(){
+		SuBmit();
+		});
+	function SuBmit(){
+		var Zongjin = $('.z_pri:eq(0) .z_s').text(),
+		Youhui = $('input[name="youhui"]').val(),
+		Dingjin = $('input[name="dingjin"]').val();
+		$('input[name="zongjin"]').val(Zongjin);
+		$('input[name="shifu"]').val(Zongjin-Dingjin-Youhui);
+		$('.ad_con').removeClass('ad_con_h');
+		$('.advance :input').prop('readonly',true);
+		$('.advance #btn_advan').off('click').on('click',Advan);
+		};
+	function Advan(){
+			alert('定金交完了');
+			$('.z_pri:eq(1) .z_s').text($('input[name="dingjin"]').val());
+			$('.z_pri:eq(2) .z_s').text($('input[name="shifu"]').val());
+			$('.advance :input').prop('readonly',false);
+			$('.mask').removeClass('maskon');
+			$('.ad_con').addClass('ad_con_h');
+			$('.advance').css({'-webkit-transform':'translate(-50%,-75%)','opacity':'0','pointer-events':'none'});
+			$('.advance #btn_advan').off('click',Advan).on('click',SuBmit);;
+		};
+	/*-------------------------------*/	
+	
+	$('.advance button[name="ad_no"]').on('click',function(){
+		$('.advance #btn_advan').off('click',Advan).on('click',SuBmit);
+		$('.advance :input').prop('readonly',false);
+		$('.mask').removeClass('maskon');
+		$('.ad_con').addClass('ad_con_h');
+		$('.advance').css({'-webkit-transform':'translate(-50%,-75%)','opacity':'0','pointer-events':'none'});
+		});
+	
+	$('.label li a').click(function(){
+		$(this).addClass('on').parents('li').siblings().find('a').removeClass('on');
+		});
+	
+	/*$('body').contents().not('.content').on('touchmove',function(e){
+		e.preventDefault(); //禁止浏览器的 橡皮筋效果
+		});*/
+	$('.head,.pro,.foot,.pop_t,.label,#pop_pro_t,.exit,.mask,.advance').on('touchmove',function(e){
+		e.preventDefault(); //禁止浏览器的 橡皮筋效果
+		});
+}	
+</script>
+</html>

@@ -1,0 +1,111 @@
+.label{
+	width:100%;
+	padding:15px 15px 10px;
+	background:#fafafa;
+	border-top:2px solid #fff;
+	border-bottom: 1px solid #ccc;
+}
+.label li{
+	float:left;
+	margin:0 3px 3px 0;}
+.label li a{
+	display:block;
+	padding:0 9px;
+	line-height:30px;
+	font-size:14px;
+	color:#fff;
+	background:#a5a5a5;
+	border-radius:3px;
+	border:1px solid #a5a5a5;
+	transition:0.2s all;
+	-webkit-transition:0.2s all;}
+.label li a.on{ color:#666; background:#fff; border:1px solid #666;}
+.label >div >span{ display:inline-block; font-size:14px; line-height:22px; vertical-align:top; color:#666;}
+.label >div >ul{ display:inline-block;}
+.label .so_lab{
+	border-radius:5px;
+	border:1px #999 solid;
+	overflow:hidden;}
+.label .so_lab input{
+	padding:0 40px 0 10px;
+	height:30px;
+	line-height:20px;}
+.label .so_lab .icon_so{
+	width:30px;
+	height:30px;
+	background:url(../image/icon.png) no-repeat -176px 3px;}
+
+
+.content{
+	width:100%;
+	overflow-x:hidden;
+	-webkit-overflow-scrolling: touch;
+	background:#fff;
+	padding:12px;}
+.c_li{
+	float:left;
+	width:calc(100% / 4);
+	width:-webkit-calc(100% / 4);
+	padding:12px;
+	transition:1s width;
+	-webkit-transition:1s width;}
+.c_li_box{
+	width:100%;
+	height:100%;
+	background:#fff;
+	overflow:hidden;
+	border-radius:5px;
+	border:1px solid #e0e0e0;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.15);}
+.c_li_box >span{
+	display:block;
+	padding:5px 10px 10px 10px;}
+.c_li_box >span >span{ display: block;}
+.c_li_box .pic{
+	padding:2px;
+	width:100%;
+	overflow:hidden;
+    text-align: center;} 
+.c_li_box .pic img{
+	display:block;
+	border-radius:3px 3px 0 0;}
+.c_li_box .info {
+	line-height:20px;
+	color:#555;
+	font-size:14px;}
+.c_li_box .info i{
+	float:left;
+	font-style:normal;
+	font-weight:bold;
+	color:#fb6362;}
+.c_li_box .info i:last-child{
+	color:inherit;
+	font-weight:normal;
+	float:right;}
+.c_li_box .title{
+	font-size:16px;
+	font-weight:bold;
+	color:#555;
+	margin-bottom:5px;}
+.c_li_box .c_btns{
+	text-align:center;}
+.c_li_box .c_btns a{
+	display:block;
+    padding: 5px 13px;
+    background: #fb6362;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 3px;}
+.c_li_box .c_btns a:active{
+	background:#EC5150;}
+
+@media only screen and (max-width:768px){
+.c_li{
+	width:calc(100% / 3);
+	width:-webkit-calc(100% / 3);}
+}
+@media only screen and (max-width:568px){
+.c_li{
+	width:calc(100% / 2);
+	width:-webkit-calc(100% / 2);}
+}

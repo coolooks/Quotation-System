@@ -1,0 +1,140 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, abbr, address, big, em, img, ins, s, samp,
+small, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+form, label, table, tr, th, td,
+output, time, audio, video, input ,button,select,option{
+	margin:0;
+	padding:0;
+	border:0;
+	}
+
+html,body{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	}
+body{
+	background:url(../image/bg.jpg) no-repeat;
+	background-size:cover;
+	font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif;
+	-webkit-touch-callout:none;/*长按禁止*/
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;}
+
+a{ text-decoration:none; font-family:inherit; display:block; color:#fff;}
+ul,li{ list-style:none;}
+a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}/*移动端 禁止出现外边框*/
+input,select,textarea,botton{ -webkit-appearance: none; border-radius:0;}/*禁止IOS组件的默认外观*/
+select:focus,input:focus,button:focus{ outline:none;}
+b{ display: inline-block; width: 0; height: 100%; vertical-align: middle;}
+
+
+.contain{
+	position:fixed;
+	left:50%;
+	top:50%;
+	width:80%;
+	height:400px;
+	transform:translate(-10%,-60%);
+	-webkit-transform:translate(-50%,-60%);}
+.c_top{ height:100px;}
+.c_top > div{ float:left;} 
+.c_top div:first-child{
+	width:60%;
+	line-height:90px;
+	text-align:center;
+	font-size:4.2em;
+	letter-spacing:0.1em;
+	color:#fff;
+	text-shadow: 0 0 7px rgba(0,0,0,0.3);}
+.c_top #date{
+	width:40%;}
+.c_top #date span{
+	width:100%;
+	height:50px;
+	display:block;
+	font-size:1.4em;
+	color:#fff;
+	text-align:center;
+	text-shadow: 0 0 7px rgba(0,0,0,0.3);}
+.c_top #date span#time1{ font-size:2.5em; line-height:70px;}
+.c_top #date span#time2 i{ font-style:normal; line-height:38px; }
+.c_top #date span#time2 i#t2{ margin-left:10px;}
+
+.c_bom > div{ float:left;}
+.c_bom .login{
+	box-sizing:border-box;
+	width:60%;
+	height:300px;
+	background-color:#046fb3;
+	text-align: center;}
+.c_bom .login *{ font-family:inherit;}
+.c_bom .login #form{
+	display: inline-block;
+	vertical-align: middle;
+	width: 90%;
+}
+.c_bom .login input{
+	width:100%;
+	height:50px;
+	box-sizing:border-box;
+	padding:10px;
+	font-size:16px;
+	margin-bottom:20px;}
+.c_bom .login button{
+	width:100%;
+	text-align:center;
+	line-height:50px;
+	background:#fb6362;
+	font-size:16px;}
+.c_bom .login button:active{ background:#f54544;}
+.c_bom .label{ box-sizing:border-box; padding:0 0 0 2px;width:40%; height:300px; overflow:hidden;}
+.c_bom .label >div{ float:left; height:150px; box-sizing:border-box;}
+.c_bom .label >div >span{ display:block; height:150px;}
+
+.c_bom .label >div:nth-child(1){ width:100%; background-color:#333;}
+
+.label >div:nth-child(2),.label >div:nth-child(3){ width:50%;  margin-top:2px;}
+.label >div:nth-child(2){ padding-right: 2px;}
+.label >div:nth-child(2) >div{ height: 100%; background-color:#fb6362;}
+
+.label >div:nth-child(3) { background-color:#f0af3d; }
+
+.label span.icon{
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	background:url(../image/icon.png) no-repeat;
+}
+.label >div:nth-child(1) .icon{
+	display: inline-block;
+	width: 45px;
+	height: 60px;
+	background-position: 0px -50px;
+	margin-right: 10px;}
+.label >div:nth-child(1) .icon,.label >div:nth-child(1) i{ vertical-align: middle;}
+.label span.l2>a>span,.label span.l3>a>span{ display: inline-block; vertical-align: middle;}
+
+
+.label >div:nth-child(2) .icon{ background-position: -45px 0px;}
+.label >div:nth-child(3) .icon{ background-position: -96px 0px;}
+
+.c_bom .label i{ font-style: normal;}
+.c_bom .label a{ width:100%; height:100%; font-size:1.4em; text-align:center; box-sizing:border-box;}
+.c_bom .label>div:nth-child(1) a{font-size: 1.8em;}
+
+
+
+
+.fixclear:before,.fixclear:after{
+	content:'';
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;}

@@ -1,0 +1,128 @@
+.content{
+	padding:15px 40px 40px;
+	height:87%;
+	background:#fff;
+	overflow-x:hidden;
+	-webkit-overflow-scrolling: touch;}
+.content .title{
+	font-size:1.3em;
+	color:#333;
+	width:100%;
+	line-height:70px;
+	border-bottom:1px solid #ccc;
+	margin-bottom:30px;}
+	
+.info{
+	width:100%;}
+	
+.info >div{
+	float:left;
+	width:50%;}
+	
+.info_l >div{
+	width:100%;
+	letter-spacing:-5px;
+	margin-bottom:20px;}
+	
+.info_l >div span:first-child{
+	display:inline-block;
+	width:30%;
+	line-height:42px;
+	color:#555;
+	text-align:right;
+	letter-spacing:normal;
+	padding-right:15px;}
+
+.info_l >div span:last-child{
+	display:inline-block;
+	width:70%;}
+.info_l .srk input{
+	box-sizing:border-box;
+	width:100%;
+	line-height:20px;
+	font-size:16px;
+	padding:8px 10px;
+	border:1px solid #ccc;
+	font-family:inherit;
+	color:#555;
+	background:#fff;}
+	
+.srk_item{
+	padding:7px 10px;
+	font-size:16px;
+	border:1px #ccc solid;
+	font-family:inherit;
+	color:#555;}
+	
+.info_l input[name="zone_name"]{
+	width:120px;
+	margin-left:5px;}
+.info_l input[name="area"]{
+	width:55px;
+	margin-left:5px;}
+
+.info_txt >span{ float:left;}
+.info_txt textarea{
+	box-sizing:border-box;
+	padding:10px;
+	width:100%;
+	height:70px;
+	resize:none;
+	border-color:#ccc;
+	font-family:inherit;
+	color:#555;
+	font-size:14px;}
+
+.info_btn button{
+	width:calc((100% - 26px) / 2);
+	width:-webkit-calc((100% - 26px) / 2);
+	height:42px;
+	margin-right:25px;
+	background:#fb6362;
+	font-size:14px;
+	font-family:inherit;
+	color:#FFF;}
+.info_btn button:last-child{
+	background:#999;
+	margin-right:0;}
+	
+/*右边*/
+.info_r{
+	height:300px;
+	text-align:center;
+	padding-left:20px;}
+#zone_pic{
+	height:100%;}
+#zone_pic img{
+	height:100%;
+	max-height:inherit;
+	max-width:100%;}
+
+.mask{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:-1;
+    width: 100%;
+    height: 100%;
+    opacity:0;
+	background: rgba(0,0,0,0.9);
+	text-align:center;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;}
+.mask a{
+	display: block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    z-index: 2;
+    color: #fff;
+    font-size: 66px;
+    font-weight: bold;
+    overflow: hidden;
+	text-shadow: 0 0 10px rgba(0,0,0,1);}
+	
+.onmask{ opacity:1; z-index:1;}

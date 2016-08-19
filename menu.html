@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes"><!--删除默认的苹果工具栏和菜单栏-->
+<meta name="apple-mobile-web-app-status-bar-style" content="blank"><!--设置Web App的状态栏（屏幕顶部栏）的样式-->
+<meta name="format-detection" content="telephone=no"><!--启动或禁用自动识别页面中的电话号码-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit"><!--html打开强制为极速模式-->
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<title>导航菜单-顶层互联网家</title>
+<link rel="stylesheet" type="text/css" href="css/menu.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body onLoad="timeS()">
+<div class="contain">
+	<div class="c_top">
+    	<div id="ttt">功能导航</div>
+        <div id="date">
+        	<span id="time1"></span>
+            <span id="time2"><i id="t1"></i><i id="t2"></i></span>
+        </div>
+    </div>
+    <div class="c_bom fixclear">
+        <div class="label">
+        	<div class="lab">
+                <span class="l1"><a href="index.html"><span><span class="icon"></span><i>创建报价单</i></span><b></b></a></span>
+            </div>
+            <div class="lab">
+            	<span class="l2"><a href="zone.html"><span><span class="icon"></span><i>小区户型</i></span><b></b></a></span>
+            </div>
+            <div class="lab">
+                <span class="l3"><a href="goods_pro.html"><span><span class="icon"></span><i>家居建材</i></span><b></b></a></span>
+            </div>
+            <div class="lab">
+            	<span class="l4"><a href="add_info.html"><span><span class="icon"></span><i>添加客户</i></span><b></b></a></span>
+            </div>
+            <div class="lab">
+                <span class="l5"><a href="guest_obj.html"><span><span class="icon"></span><i>客户案例</i></span><b></b></a></span>
+            </div>
+            <div class="lab">
+                <span class="l6"><a href="index.html"><span><span class="icon"></span><i>订单管理</i></span><b></b></a></span>
+            </div>
+            <div class="lab">
+            	<span class="l7"><a href="#"><span><span class="icon"></span><i>搜索</i></span><b></b></a></span>
+            </div>
+            <div class="lab">
+                <span class="l8"><a href="#"><span><span class="icon"></span><i>注销</i></span><b></b></a></span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+function timeS(){
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = d.getMonth()+1;
+	var date = d.getDate();
+	var weekday = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+	month = checktime(month);
+	date = checktime(date);
+	var Dates = year+"-"+month+"-"+date;
+	document.getElementById("time1").innerHTML = Dates;
+	document.getElementById("t2").innerHTML = weekday[d.getDay()];
+	
+	window.setInterval(Time1,200);
+	function Time1(){
+		var D = new Date();
+		var hour = D.getHours();
+		var minute = D.getMinutes();
+		var second = D.getSeconds();
+		hour = checktime(hour);
+		minute = checktime(minute);
+		second = checktime(second);
+		var Times = hour+":"+minute+":"+second;
+		document.getElementById("t1").innerHTML = Times;
+		}
+
+	function checktime(i){
+			if(i<10){
+				i="0"+i;
+				}
+				return i;
+			}
+
+	}
+	$('body').on('touchmove',function(e){
+		e.preventDefault(); //禁止浏览器的 橡皮筋效果
+		});
+</script>
+</html>

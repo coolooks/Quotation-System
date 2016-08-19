@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes"><!--删除默认的苹果工具栏和菜单栏-->
+<meta name="apple-mobile-web-app-status-bar-style" content="blank"><!--设置Web App的状态栏（屏幕顶部栏）的样式-->
+<meta name="format-detection" content="telephone=no"><!--启动或禁用自动识别页面中的电话号码-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit"><!--html打开强制为极速模式-->
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<title>添加客户信息-顶层互联网家</title>
+<link rel="stylesheet" type="text/css" href="css/head.css" />
+<link rel="stylesheet" type="text/css" href="css/add_info.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<div class="head">
+    <div class="logo"><div><a href="login.html"></a></div><b></b></div>
+    <div class="so">
+    	<div class="so_box">
+            <div class="so_t">
+                <input type="text" name="text" placeholder="请输入客户姓名 / 客户电话查询">
+                <a href="javascript:;"><div class="icon_so"></div></a>
+            </div>
+            <span class="web_wz">当前位置：<a href="#1">添加客户</a></span>
+        </div>
+        <b></b>
+    </div>
+    <div class="time">
+        <div>
+            <div id="T1"></div>
+            <div id="T2"></div>
+        </div>
+        <b></b>
+    </div>
+    <div class="btns">
+        <div class="b_1 b"><a href="add_info.html"><div><span></span><p>添加客户</p></div><b></b></a></div>
+        <div class="b_2 b"><a href="guest_obj.html"><div><span></span><p>客户案例</p></div><b></b></a></div>
+        <div class="b_3 b"><a href="goods_pro.html"><div><span></span><p>家居超市</p></div><b></b></a></div>
+        <div class="b_4 b close"><a href="javascript:;"><div><span></span><p>注销</p></div><b></b></a></div>
+    </div>
+</div>
+<div class="content">
+	<div class="title">
+    	<p>添加客户信息</p>
+    </div>
+    <div class="info fixclear">
+    	<div class="info_l" id="form">
+        	<div class="name">
+            	<span class="info_t">姓名：</span>
+                <span class="srk"><input type="text" name="name" autocomplete="off"></span>
+            </div>
+            <div class="tel">
+            	<span class="info_t">联系方式：</span>
+                <span class="srk"><input type="text" name="tel" autocomplete="off"></span>
+            </div>
+            <div class="zone">
+            	<span class="info_t">小区：</span>
+                <span class="srk">
+                	<select class="srk_item" id="qu">
+                    	<option value="涧西区">涧西区</option>
+                        <option value="西工区">西工区</option>
+                        <option value="老城区">老城区</option>
+                        <option value="瀍河区">瀍河区</option>
+                        <option value="洛龙区">洛龙区</option>
+                        <option value="吉利区">吉利区</option>
+                        <option value="伊滨区">伊滨区</option>
+                        <option value="偃师市">偃师市</option>
+                        <option value="孟津县">孟津县</option>
+                        <option value="伊川县">伊川县</option>
+                        <option value="洛宁县">洛宁县</option>
+                        <option value="汝阳县">汝阳县</option>
+                        <option value="宜阳县">宜阳县</option>
+                        <option value="新安县">新安县</option>
+                        <option value="栾川县">栾川县</option>
+                        <option value="嵩县">嵩县</option>
+                        <option value="嵩县">未知</option>
+                    </select>
+                    <input type="text" name="zone_name" autocomplete="off" placeholder="小区名称">
+                </span>
+            </div>
+            <div class="h_type">
+            	<span class="info_t">结构：</span>
+				<span class="srk">
+					<select class="srk_item" id="shi">
+                    	<option value="31">三室一厅</option>
+                        <option value="32">三室两厅</option>
+                        <option value="21">二室一厅</option>
+                        <option value="42">四室两厅</option>
+                        <option value="41">四室一厅</option>
+                        <option value="11">一室一厅</option>
+                        <option value="0">未知</option>
+                    </select>
+                    <input type="text" name="area" autocomplete="off" placeholder="面积">
+                    <input type="text" value="平方" readonly style="width:55px;border:0;">
+                </span>
+            </div>
+            <div class="info_txt fixclear">
+            	<span class="info_t">备注：</span>
+				<span class="srk">
+                	<textarea maxlength="120" placeholder="最多输入120个字"></textarea>
+                </span>
+            </div>
+            <div class="info_btn">
+            	<span class="b_l"></span>
+				<span class="b_r"><button type="button" type="submit">确定</button><button type="reset">取消</button></span>
+            </div>
+        </div>
+        <div class="info_r pic">
+        	<div id="zone_pic">
+        		<img src="image/zone_info.jpg" >
+        	</div>
+        </div>
+    </div>
+</div>
+<div class="mask"><a href="JavaScript:;">&times;</a></div>
+</body>
+<script>
+window.onload = function(){
+
+	
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = d.getMonth()+1;
+	var date = d.getDate();
+	month = checktime(month);
+	date = checktime(date);
+	var Dates = year+"-"+month+"-"+date;
+	
+	window.setInterval(Time1,100);
+	function Time1(){
+		var D = new Date();
+		var hour = D.getHours();
+		var minute = D.getMinutes();
+		var second = D.getSeconds();
+		var weekday = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+		var week = weekday[D.getDay()];
+		hour = checktime(hour);
+		minute = checktime(minute);
+		second = checktime(second);
+		var Times = hour+":"+minute+":"+second+"&nbsp&nbsp"+week;
+		document.getElementById("T1").innerHTML = Dates;
+		document.getElementById("T2").innerHTML = Times;
+    }
+	
+	function checktime(i){
+		if(i<10){
+			i="0"+i;
+			}
+			return i;
+		}
+	
+	$('#zone_pic img').click(function(){
+		$('.mask').addClass('onmask');
+		 $(".mask").append($("#zone_pic").clone(false));
+		});
+	$('.mask a').click(function(){
+		$(this).siblings().remove();
+		$(this).parent().removeClass('onmask');
+		});
+	
+	$('body').on('touchmove',function(e){
+		e.preventDefault(); //禁止浏览器的 橡皮筋效果
+		});
+}
+</script>
+</html>

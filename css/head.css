@@ -1,0 +1,116 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, abbr, address, big, em, img, ins, s, samp,
+small, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+form, label, table, tr, th, td,
+output, time, audio, video, input ,button,select,option{
+	margin:0;
+	padding:0;
+	border:0;
+	}
+
+html,body{
+	width:100%;
+	height:100%;
+	overflow:hidden;}
+body{
+	font-family:Microsoft YaHei,Helvetica,Arial,sans-serif;
+	-webkit-touch-callout:none;/*长按禁止*/
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	-webkit-tap-highlight-color:rgba(255,0,0,0);}/*移动端 禁止出现外边框*/
+	
+a{ text-decoration:none; font-family:inherit;}
+a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}/*移动端 禁止出现外边框*/
+input,textarea,botton{ -webkit-appearance: none; border-radius:0;}/*禁止组件的默认外观*/
+select:focus,input:focus,button:focus{ outline:none;}
+ul,li{ list-style:none;}
+div,span,p,ul,li{ box-sizing:border-box; -webkit-box-sizing:border-box;}
+.head{
+	width:100%;
+	height:13%;
+	overflow:hidden;
+	background:#046fb3;}
+.head >div{ float:left; height:100%; overflow:hidden;}
+.head .logo{
+	width:12%;
+	text-align: center;
+}
+.head .logo div{
+	display:inline-block;
+	width:75%;
+	height: 80%;
+	background:url(../image/logo.png) center no-repeat;
+	background-size:contain;
+	vertical-align:middle;
+}
+.head .logo div a{ display: block; width: 100%; height: 100%;}
+b{ display:inline-block; width:0; height:100%; vertical-align:middle;}
+
+.so{ width:35%;}
+.so .so_box{
+	display:inline-block;
+	vertical-align:middle;
+	width:calc(100% - 5px);
+	width:-webkit-calc(100% - 5px);}
+.so .web_wz,.so .web_wz *{ color:#fff; font-size:14px; line-height:28px;}
+.so .so_t{
+	position: relative;}
+.so input{
+	width:100%;
+	height:45px;
+	line-height:20px;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	padding:0 55px 0 15px;
+	font-size:14px;
+	color:#555;
+	font-family:inherit;}
+.so .icon_so{
+	position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+    width: 45px;
+    background:url(../image/icon.png) no-repeat -165px -52px;
+	background-color:#fff;}
+
+.time{ width:15%;}
+.time >div{ height:50px; display: inline-block; vertical-align: middle; width:calc(100% - 5px); width:-webkit-calc(100% - 5px);}
+.time >div >div{ line-height:25px; color:#fff; text-align: center;}
+.time #T1{ font-size:1.4em;}
+
+@media only screen and (max-width:768px){
+	.time #T1{ font-size:16px;}
+	.time #T2{ font-size:12px;}
+	.btns .b a > div p{ font-size:14px;}
+	}
+
+.btns{ width:38%;}
+.btns .b{ width:29%; height:100%; float:left; border-left:2px solid rgba(255,255,255,1); text-align:center;}
+.btns .b span{display:block; width:40px; height: 40px; margin: 0 auto; background:url(../image/icon.png) no-repeat;}
+.btns .close{ width:13%; background-color:#000;}
+.btns .close span{ width:25px;}
+.btns .b_1{ background-color:#fb6362;}
+.btns .b_2{ background-color:#046FB3;}
+.btns .b_3{ background-color:#f0af3d;}
+.btns .b_1 span{ background-position: 1px 0px;}
+.btns .b_2 span{ background-position: -45px 0px;}
+.btns .b_3 span{ background-position: -96px 0px;}
+.btns .b_4 span{ background-position: -145px 8px;}
+.btns .b a{ display: block; height: 100%; color: #fff;}
+.btns .b a>div{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.fixclear:before,.fixclear:after{
+	content:'';
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;}

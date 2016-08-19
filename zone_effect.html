@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes"><!--删除默认的苹果工具栏和菜单栏-->
+<meta name="apple-mobile-web-app-status-bar-style" content="blank"><!--设置Web App的状态栏（屏幕顶部栏）的样式-->
+<meta name="format-detection" content="telephone=no"><!--启动或禁用自动识别页面中的电话号码-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit"><!--html打开强制为极速模式-->
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<title>小区装修效果-顶层互联网家</title>
+<link rel="stylesheet" type="text/css" href="css/head.css" />
+<link rel="stylesheet" type="text/css" href="lib/css/style.css" />
+<link rel="stylesheet" type="text/css" href="lib/css/swipebox.min.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<style>
+.xian{
+	width:100%;
+	height:0.3%;}
+.content{
+	width:100%;
+	height:86.7%;
+	overflow-x:hidden;
+	-webkit-overflow-scrolling: touch;
+	background:#fafafa;}
+</style>
+</head>
+
+<body>
+<div class="head">
+    <div class="logo"><div><a href="login.html"></a></div><b></b></div>
+    <div class="so">
+    	<div class="so_box">
+            <div class="so_t">
+                <input type="text" name="text" placeholder="请输入客户姓名 / 客户电话查询">
+                <a href="javascript:;"><div class="icon_so"></div></a>
+            </div>
+            <span class="web_wz">当前位置：<a href="#">客户案例</a>&nbsp;&gt;&nbsp;<a href="#">效果图</a></span>
+        </div>
+        <b></b>
+    </div>
+    <div class="time">
+        <div>
+            <div id="T1"></div>
+            <div id="T2"></div>
+        </div>
+        <b></b>
+    </div>
+    <div class="btns">
+        <div class="b_1 b"><a href="add_info.html"><div><span></span><p>添加客户</p></div><b></b></a></div>
+        <div class="b_2 b"><a href="guest_obj.html"><div><span></span><p>客户案例</p></div><b></b></a></div>
+        <div class="b_3 b"><a href="goods_pro.html"><div><span></span><p>家居超市</p></div><b></b></a></div>
+        <div class="b_4 b close"><a href="javascript:;"><div><span></span><p>注销</p></div><b></b></a></div>
+    </div>
+</div>
+<div class="xian"></div>
+<div class="content">
+    <div id="fb-root"></div>
+    <section id="exemple" class="container fixclear">
+        <div class="wrap small-width fixclear">
+            <div id="try"></div>
+            <ul id="box-container" class="fixclear">
+                <li class="box">
+                    <a href="lib/images/image-1.jpg" class="swipebox" title="Fog">
+                        <img src="lib/images/image-1.jpg" alt="image">
+                    </a>
+                </li>
+                <li class="box">
+                    <a href="lib/images/image-2.jpg" class="swipebox" title="City">
+                        <img src="lib/images/image-2.jpg" alt="image">
+                    </a>
+                </li>
+                <li class="box">
+                    <a href="lib/images/image-3.jpg" class="swipebox" title="Street">
+                        <img src="lib/images/image-3.jpg" alt="image">
+                    </a>
+                </li>
+                <li class="box">
+                    <a href="lib/images/image-4.jpg" class="swipebox" title="Mustache Guy">
+                        <img src="lib/images/image-4.jpg" alt="image">
+                    </a>
+                </li>
+                <li class="box">
+                    <a href="lib/images/image-5.jpg" class="swipebox" title="Mustache Guy">
+                        <img src="lib/images/image-5.jpg" alt="image">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+</body>
+<script src="lib/js/ios-orientationchange-fix.js"></script>
+<script src="lib/js/jquery.swipebox.min.js"></script>
+<script>
+window.onload = function(){
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = d.getMonth()+1;
+	var date = d.getDate();
+	month = checktime(month);
+	date = checktime(date);
+	var Dates = year+"-"+month+"-"+date;
+	
+	window.setInterval(Time1,100);
+	function Time1(){
+		var D = new Date();
+		var hour = D.getHours();
+		var minute = D.getMinutes();
+		var second = D.getSeconds();
+		var weekday = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+		var week = weekday[D.getDay()];
+		hour = checktime(hour);
+		minute = checktime(minute);
+		second = checktime(second);
+		var Times = hour+":"+minute+":"+second+"&nbsp&nbsp"+week;
+		document.getElementById("T1").innerHTML = Dates;
+		document.getElementById("T2").innerHTML = Times;
+    }
+	
+	function checktime(i){
+		if(i<10){
+			i="0"+i;
+			}
+			return i;
+		}
+	
+	/* Basic Gallery */
+		$( '.swipebox' ).swipebox();
+		
+		/* Video */
+		$( '.swipebox-video' ).swipebox();
+
+		/* Dynamic Gallery
+		$( '#gallery' ).click( function( e ) {
+			e.preventDefault();
+			$.swipebox( [
+				{ href : 'images/image-1.jpg', title : 'My Caption' },
+				{ href : 'images/image-2.jpg', title : 'My Second Caption' }
+			] );
+		} ); */
+		
+	$('body').contents().not('.content').on('touchmove',function(e){
+		e.preventDefault(); //禁止浏览器的 橡皮筋效果
+		});
+	}
+</script>
+</html>
